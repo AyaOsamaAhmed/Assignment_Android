@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Assignment_Android</string>
+    <string name="no_movie">No Movie</string>
 </resources>

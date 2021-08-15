@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        >
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        >
+        <com.opensooq.pluto.PlutoView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:indicator_visibility="true"
+            app:layout_constraintCircleRadius="8dp"
+            tools:src="@tools:sample/backgrounds/scenic"
+            />
+
+     <!--   <com.pdftron.pdf.PDFViewCtrl
+            android:id="@+id/pdfviewctrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical|horizontal"
+
+            tools:ignore="MissingClass" />
+-->
+
+    </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/title_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="title url"
+            android:layout_margin="15dp"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner" />
+
+
+        <TextView
+            android:id="@+id/type_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:text="movie"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_url" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
