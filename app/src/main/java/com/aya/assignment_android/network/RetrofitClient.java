@@ -21,13 +21,13 @@ public class RetrofitClient {
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
     public  static String Base_Url = "https://nagwa.free.beeceptor.com/";
-
-   private ApiInterface apiRequest ;
+    public  static Context Base_context ;
+    private ApiInterface apiRequest ;
 
  HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
 
 
-    public RetrofitClient(Context mContext ) {
+    public RetrofitClient() {
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
@@ -58,10 +58,10 @@ public class RetrofitClient {
 
     } // Retrofit Client Method
 
-    public static synchronized RetrofitClient getInstance(Context mContext ) {
+    public static synchronized RetrofitClient getInstance() {
 
         if (mInstance == null ) {
-            mInstance = new RetrofitClient(mContext);
+            mInstance = new RetrofitClient();
         }
 
         return mInstance;

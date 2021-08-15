@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -31,7 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
+    dataBinding {
+        enabled = true
+    }
 
 }
 
@@ -46,10 +49,21 @@ dependencies {
 
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-alpha03")
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    // Annotation processor
+    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0-alpha03")
 
     //
     implementation 'com.wang.avi:library:2.1.3'
 
+    //Dragger
+    implementation 'com.google.dagger:dagger-android-support:2.20'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.20'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.20'
+
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0-alpha03")
 
     //retrofit2
     implementation 'com.google.code.gson:gson:2.8.5'

@@ -6,5 +6,5 @@ import com.aya.taskdetails.network.responseModel.data.Movie
 
 @Keep
 data class HomeResponse(
-        val movies: List<Movie> = listOf()
+        val movies: ArrayList<Movie>
 )
