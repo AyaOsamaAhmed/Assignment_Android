@@ -10,10 +10,8 @@ import com.aya.assignment_android.network.RetrofitClient.Base_context
 import com.aya.taskdetails.network.ApiInterface
 import com.aya.taskdetails.network.Coroutines
 import com.aya.taskdetails.network.repository.GeneralDataRepository
-import com.aya.taskdetails.network.responseModel.HomeResponse
 import com.aya.taskdetails.network.responseModel.data.Movie
 import kotlinx.coroutines.Job
-import javax.inject.Inject
 
 class ViewModel : ViewModel() {
 
@@ -29,7 +27,7 @@ class ViewModel : ViewModel() {
         generalDataRepository = GeneralDataRepository(apiClient,Base_context)
     }
 
-    @Inject
+
     fun getMovies() {
         getDataJob = Coroutines.ioThenMain({
             try {

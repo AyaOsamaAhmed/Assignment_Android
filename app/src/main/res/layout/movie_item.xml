@@ -13,19 +13,25 @@
     <LinearLayout
         android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical"
         >
-        <com.opensooq.pluto.PlutoView
-            android:id="@+id/banner_image"
+
+        <WebView
+            android:id="@+id/pdfVM"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            app:indicator_visibility="true"
-            app:layout_constraintCircleRadius="8dp"
-            tools:src="@tools:sample/backgrounds/scenic"
+            android:visibility="gone"
+              />
+      <VideoView
+            android:id="@+id/videoVM"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             />
 
      <!--   <com.pdftron.pdf.PDFViewCtrl

@@ -77,6 +77,10 @@ dependencies {
     // viwer pluto
     implementation 'com.opensooq.android:pluto:1.6'
 
+    //for images
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
